@@ -6,7 +6,7 @@ class String
     input.each_char.with_index do |c, i|
       break if input == 'q/Q'
       puts "#{input[i]} and #{input[(input.length-1) - i]}" 
-      break if i == ((input.length-1) -i) 
+      break if i == (input.length-1 -i) end
       next if input[i] == input[(input.length-1) - i]
     end
   end
