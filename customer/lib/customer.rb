@@ -8,19 +8,19 @@ class Customer
 
   def initialize(name)
     @name = name
-    puts @@account_no
     @@account_no +=1
-    puts @@account_no
     @balance = 1000
   end
 
   def deposit(amount)
+    puts "the account number of this customer is #{@@account_no}"
     puts "Deposited"
     @balance = @balance + amount
     puts @balance
   end
 
   def withdraw(amount)
+    puts "the account number of this customer is #{@@account_no}"
     @balance = @balance - amount
     puts "Withdrawn"
     puts @balance
