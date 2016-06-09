@@ -19,9 +19,13 @@ class Customer
   end
 
   def withdraw(amount)
-    @balance = @balance - amount
-    puts "Withdrawn"
-    @balance
+    if @balance < 0
+      puts "negative balance"
+    else
+      @balance = @balance - amount
+      puts "Withdrawn"
+      @balance
+    end
   end
 
   def to_s
