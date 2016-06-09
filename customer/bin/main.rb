@@ -1,9 +1,12 @@
 require_relative '../lib/customer.rb'
 
 
+customer1 = Customer.new("neha")
 puts "initialized first customer"
-c1 = Customer.new("neha")
-c1.deposit(10)
+customer1.deposit(10)
+puts customer1
+
+customer2 = Customer.new("shubham")
 puts "initialized second customer"
-c2 = Customer.new("shubham")
-c2.withdraw(10)
+customer2.withdraw(10)
+puts customer2

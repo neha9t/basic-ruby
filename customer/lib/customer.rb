@@ -3,26 +3,28 @@
 # and set balance to 1000. Define methods deposit() and withdraw() for this class.
 class Customer
 
-  attr_accessor :account_no
-  @@account_no = 0
+  attr_accessor :account_number
+  @@account_number = 0
 
   def initialize(name)
     @name = name
-    @@account_no +=1
+    @@account_number +=1
     @balance = 1000
   end
 
-  def deposit(amount)
-    puts "the account number of this customer is #{@@account_no}"
-    puts "Deposited"
+  def deposit(amount)   
     @balance = @balance + amount
-    puts @balance
+    puts "Deposited"
+    @balance
   end
 
   def withdraw(amount)
-    puts "the account number of this customer is #{@@account_no}"
     @balance = @balance - amount
     puts "Withdrawn"
-    puts @balance
+    @balance
+  end
+
+  def to_s
+    puts "#{@name}--#{@@account_number}--#{@balance}"
   end
 end

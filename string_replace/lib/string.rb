@@ -2,7 +2,7 @@
 
 class String
 
-  def string_replace
-	  self.gsub(/[aeiou]/, "*")
+  def replace
+	  gsub(/[aeiou]/, "*")
   end
 end
