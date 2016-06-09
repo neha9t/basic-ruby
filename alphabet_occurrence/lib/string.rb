@@ -3,10 +3,10 @@
 class String
   
   def alphabet_count()
-    hash_new = Hash.new(0)
-    self.each_char do |i|
-    hash_new[i]+=1
+    alphabet_hash = Hash.new(0)
+    each_char do |i|
+      alphabet_hash[i]+=1
     end
-    hash_new
+    alphabet_hash
   end
 end

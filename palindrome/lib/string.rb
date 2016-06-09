@@ -3,11 +3,10 @@
 class String
 
   def palindrome?
-    self.each_char.with_index do |c, i|
-      break if self == 'q/Q'
-      puts "#{self[i]} and #{self[(self.length-1) - i]}" 
-      break if i == (self.length-1 -i)
-      next if self[i] == self[(self.length-1) - i]
+    if self.reverse == self && self != 'q/Q'
+      puts "Its a palindrome"
+    else
+      puts "its not!"
     end
   end
 end
