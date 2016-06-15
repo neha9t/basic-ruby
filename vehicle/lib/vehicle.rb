@@ -3,9 +3,12 @@
 # Now create a subclass 'Bike' having 'dealer' and method to show its content. 
 # Initialise a Bike class object with certain values and then change its price.
 class Vehicle
-  attr_accessor :price 
+  attr_accessor :price, :name 
   def initialize(name,price)
     @name = name
     @price = price
+  end
+  def to_s
+    puts "#{@name} , #{@price}"
   end
 end

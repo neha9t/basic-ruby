@@ -2,10 +2,15 @@
 # The 'price' of Vehicle may change over time. 
 # Now create a subclass 'Bike' having 'dealer' and method to show its content. 
 # Initialise a Bike class object with certain values and then change its price.
+
 class Bike < Vehicle
   attr_reader :dealer
-  def initialize(dealer, price)
-    super
+  def initialize(dealer, name, price)
+    super(name, price)
     @dealer = dealer
+  end
+
+  def to_s
+    puts "#{@dealer} , #{@name} , #{@price}"
   end
 end

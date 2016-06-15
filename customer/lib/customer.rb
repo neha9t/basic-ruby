@@ -12,10 +12,14 @@ class Customer
     @balance = 1000
   end
 
-  def deposit(amount)   
-    @balance = @balance + amount
-    puts "Deposited"
-    @balance
+  def deposit(amount) 
+    if amount < 0
+      puts "Can't deposit"
+    else  
+      @balance = @balance + amount
+      puts "Deposited"
+      @balance
+    end
   end
 
   def withdraw(amount)
