@@ -5,12 +5,14 @@
 
 class Bike < Vehicle
   attr_reader :dealer
-  def initialize(hash = {})
-    super(name, price)
-    @dealer = dealer
+  
+  def initialize(params = {})
+  	extracted_params = params.select {|key, value| [:name,:price].include?(key)}
+    super(extracted_params)
+    @dealer = params[:dealer]
   end
 
   def to_s
-    puts "#{@dealer} , #{@name} , #{@price}"
+    puts "#{dealer} , #{name} , #{price}"
   end
 end

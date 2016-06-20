@@ -4,11 +4,13 @@
 # Initialise a Bike class object with certain values and then change its price.
 class Vehicle
   attr_accessor :price, :name 
-  def initialize(hash = {})
-    @name = name
-    @price = price
+  
+  def initialize(params = {})
+    @name = params[:name]
+    @price = params[:price]
   end
+  
   def to_s
-    puts "#{@name} , #{@price}"
+    puts "#{name} , #{price}"
   end
 end

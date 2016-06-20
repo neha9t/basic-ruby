@@ -4,6 +4,7 @@
 class Customer
 
   attr_accessor :account_number
+  
   @@account_number = 0
 
   def initialize(name)
@@ -25,6 +26,8 @@ class Customer
   def withdraw(amount)
     if @balance < 0
       puts "negative balance"
+    elsif (amount > @balance)
+      puts "Amount greater than balance"
     else
       @balance = @balance - amount
       puts "Withdrawn"
