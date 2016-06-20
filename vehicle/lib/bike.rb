@@ -5,7 +5,7 @@
 
 class Bike < Vehicle
   attr_reader :dealer
-  def initialize(dealer, name, price)
+  def initialize(hash = {})
     super(name, price)
     @dealer = dealer
   end

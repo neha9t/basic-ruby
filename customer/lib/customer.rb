@@ -8,7 +8,7 @@ class Customer
 
   def initialize(name)
     @name = name
-    @@account_number +=1
+    @@account_number += 1
     @balance = 1000
   end
 

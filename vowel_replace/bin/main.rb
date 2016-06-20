@@ -2,4 +2,4 @@ require_relative '../lib/string.rb'
 
 puts "Input String is "
 input = gets.chomp
-puts input.replace
+puts input.vowel_replace
